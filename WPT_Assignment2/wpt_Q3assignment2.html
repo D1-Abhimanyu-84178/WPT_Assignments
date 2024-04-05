@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url("bg.png");
+        }
+        .tapediv{
+            background-color: rgba(245, 245, 245,0.3);
+            height: 70px;
+            width: 50%;
+            border-radius: 15px;
+            margin-left: 500px;
+            margin-top: 50px;
+        }
+        h1{
+            margin-top: 7px;
+            display:inline-block;
+            color: white;
+            height: 8px;
+            width: 20px;
+            padding-left: 7px;
+            
+        }
+        h3{
+            margin-top: 2px;
+            color: white;
+            height: 2px;
+            width: 25%;
+            padding-left: 7px;
+        }
+        .addimg{
+            position: absolute;
+            top: 70px;
+            left: 800px; 
+        }
+        .canclebtn{
+           position: absolute;
+           top: 75px;
+           left: 848px;
+        }
+        .decreasepng{
+           position: absolute;
+           top: 75px;
+           left: 895px;
+        }
+        .decreasepng2{
+           position: absolute;
+           top: 75px;
+           left: 930px;
+        }
+        .twitterimg{
+           position: absolute;
+           top: 75px;
+           right: 560px;
+        }
+        .donateimg{
+           position: absolute;
+           top: 75px;
+           right: 440px;
+        }
+
+        h4{
+            color: black;
+            padding-top: 10px;
+            padding-left: 18px;
+
+        }
+        h5{
+            padding-left: 12px;
+        }
+        .stickers{
+            
+            height: 250px;
+            width: 200px;
+            display: inline-block;
+            box-shadow: -5px 10px 8px black;
+            border-radius: 0px 0px 15px 0px;
+        }
+        #div1{
+            /* background-color: rgb(252, 33, 33);  */
+            background-image: linear-gradient(to bottom, rgb(255, 0, 0), rgb(210, 0, 0, 1));
+            border: 2px solid white;
+            margin-left: 450px;
+            margin-top: 80px;
+        }
+        #div2{
+            background-color: rgb(107, 136, 243);
+            background-image: linear-gradient(to bottom, rgb(152, 173, 247),  rgb(107, 136, 243));
+            border: 2px solid white;
+            margin-left: 60px;
+            margin-top: 80px;
+        }
+        #div3{
+            background-color: #0061ac;
+            background-image: linear-gradient(to bottom, rgb(61, 111, 148) , rgb(10, 81, 133));
+            border: 2px solid white;
+            margin-left: 60px;
+            margin-top: 80px;
+        }
+        #div4{
+            background-image: linear-gradient(to bottom, rgb(255, 0, 0), rgb(210, 0, 0, 1));
+            border: 2px solid white;
+            margin-left: 60px;
+            margin-top: 80px;
+            border: 2px solid white;
+        }
+        #div5{
+            background-image: linear-gradient(to bottom,rgb(82, 62, 132), rgb(40, 2, 138));
+            border: 2px solid white;
+            margin-left: 450px;
+            margin-top: 80px;
+        }
+        #div6{
+            background-image: linear-gradient(to bottom,rgb(238, 182, 126), rgb(254, 130, 4));
+            border: 2px solid white;
+            margin-left: 60px;
+            margin-top: 80px;
+        }
+        #div7{
+            background-image: linear-gradient(to bottom,rgb(238, 182, 126), rgb(254, 130, 4));
+            border: 2px solid white;
+            margin-left: 60px;
+            margin-top: 80px;
+        }
+        #div8{
+            background-image: linear-gradient(to bottom, rgb(243, 191, 191), rgb(255, 131, 130));
+            border: 2px solid white;
+            margin-left: 60px;
+            margin-top: 80px;
+        }
+        .deleteimgupper{
+           position: absolute;
+           top: 190px;
+        }
+        .deleteimgLower{
+           position: absolute;
+           top: 520px;
+        }
+        .pinimgupper{
+            position: absolute;
+            top: 182px;
+        
+        }
+        .pinimagelower{
+            position: absolute;
+            top: 520px;
+        }
+        #pinimg1{
+            left: 550px;
+        }
+        #pinimg2{
+            left: 820px;
+        }
+        #pinimg3{
+            left:1085px;
+        }
+        #pinimg4{
+            left: 1360px;
+        }
+        #pinimg5{
+            left: 550px;
+        }
+        #pinimg6{
+            left: 820px;
+        }
+        #pinimg7{
+            left:1085px;
+        }
+        #pinimg8{
+            left: 1360px;
+        }
+
+        /*style for delete img */
+
+        #dimg1{
+            left: 652px;
+        }
+        #dimg2{
+            left: 920px;
+        }
+        #dimg3{
+            left: 1190px;
+        }
+        #dimg4{
+            left: 1460px;
+        }
+        #dimg5{
+            left: 652px;
+        }
+        #dimg6{
+            left: 920px;
+        }
+        #dimg7{
+            left: 1190px;
+        }
+        #dimg8{
+            left: 1460px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="tapediv">
+        <h1>HTML5Sticky</h1>
+        <h3>sticky notes for web</h3>
+        <img src="add.png" class="addimg" height="38px" width="38px"/>
+        <img src="button_cancel.png" height="35px" width="35px" class="canclebtn"/>
+        <img src="decrease.png" height="30px" width="30px" class="decreasepng"/>
+        <img src="decrease.png" height="30px" width="30px" class="decreasepng2"/>
+        <img src="twitter.png" height="30px" width="30px" class="twitterimg"/>
+        <img src="donate.jpg" height="30px" width="110px" class="donateimg"/>
+       </div>  
+       <div class="stickers" id="div1">
+        <h4>3/8/2020 12:40 PM</h4>
+        <h5>Text here...</h5>
+       </div>
+       <div class="stickers" id="div2">
+        <h4>3/8/2020 12:40 PM</h4>
+        <h5>Text here...</h5>
+       </div>
+       <div class="stickers" id="div3">
+        <h4>3/8/2020 12:40 PM</h4>
+        <h5>Text here...</h5>
+       </div>
+       <div class="stickers" id="div4">
+        <h4>3/8/2020 12:40 PM</h4>
+        <h5>Text here...</h5>
+       </div>
+       <div class="stickers" id="div5">
+        <h4>3/8/2020 12:40 PM</h4>
+        <h5>Text here...</h5>
+       </div>
+       <div class="stickers" id="div6">
+        <h4>3/8/2020 12:40 PM</h4>
+        <h5>Text here...</h5>
+       </div>
+       <div class="stickers" id="div7">
+        <h4>3/8/2020 12:40 PM</h4>
+        <h5>Text here...</h5>
+       </div>
+       <div class="stickers" id="div8">
+        <h4>3/8/2020 12:40 PM</h4>
+        <h5>Text here...</h5>
+       </div>
+       <div class="deleteimgupper" id="dimg1">
+       <img src="delete.png" height="22px" width="22px" alt="delete image" />
+    </div>
+     <div class="deleteimgupper" id="dimg2">
+        <img src="delete.png" height="22px" width="22px" alt="delete image"/>
+     </div>
+     <div class="deleteimgupper" id="dimg3">
+        <img src="delete.png" height="22px" width="22px" alt="delete image" />
+     </div>
+     <div class="deleteimgupper" id="dimg4">
+        <img src="delete.png" height="22px" width="22px" alt="delete image" />
+     </div>
+     <div class="deleteimgLower" id="dimg5">
+        <img src="delete.png" height="22px" width="22px" alt="delete image" />
+     </div>
+     <div class="deleteimgLower" id="dimg6">
+        <img src="delete.png" height="22px" width="22px" alt="delete image" />
+     </div>
+     <div class="deleteimgLower" id="dimg7">
+        <img src="delete.png" height="22px" width="22px" alt="delete image" />
+     </div>
+    <div class="deleteimgLower" id="dimg8">
+       <img src="delete.png" height="22px" width="22px" alt="delete image" />
+    </div>
+     
+    <!-- <div class="divforpin"> -->
+    <img src="pin.png" height="35px" width="35px" alt="pin" class="pinimgupper" id="pinimg1"/>
+    <img src="pin.png" height="35px" width="35px" alt="pin" class="pinimgupper" id="pinimg2"/>
+    <img src="pin.png" height="35px" width="35px" alt="pin" class="pinimgupper" id="pinimg3"/>
+    <img src="pin.png" height="35px" width="35px" alt="pin" class="pinimgupper" id="pinimg4"/>
+
+    <img src="pin.png" height="35px" width="35px" alt="pin" class="pinimagelower" id="pinimg5"/>
+    <img src="pin.png" height="35px" width="35px" alt="pin" class="pinimagelower" id="pinimg6"/>
+    <img src="pin.png" height="35px" width="35px" alt="pin" class="pinimagelower" id="pinimg7"/>
+    <img src="pin.png" height="35px" width="35px" alt="pin" class="pinimagelower" id="pinimg8"/>
+    <!-- </div> -->
+    </div>   
+</body>
+</html>

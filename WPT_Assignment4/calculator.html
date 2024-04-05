@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+
+    <style>
+        
+        table{
+            border-collapse: collapse;
+            width: 60%;
+            height: 500px;
+        }
+        th{
+            height: 50px;
+        }
+        #buttons{
+            height: 100px;
+        }
+        td{
+            text-align: center;
+        }
+        input{
+            height: 50px;
+            width: 300px;
+        }
+        .btn{
+            width: 180px;
+            padding-left: 40px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <th colspan="7">
+            <h1><u>Calculator</u></h1>
+        </th>
+        <tr>
+            <td colspan="3">
+                <h2>Enter Number 1</h2>
+                <br>
+                <h2>Enter Number 2</h2>
+                <br>
+                <h2>Result</h2>
+            </td>
+            <!-- <td></td>
+            <td></td> -->
+            <td colspan="4">
+            <input type="text" id="firstbox" name="calci">
+            <br><br><br>
+            <input type="text" id="secondbox" name="calci">
+            <br><br><br>
+            <input type="text" id="resultbox" name="calci">
+            </td>
+            <!-- <td></td>
+            <td></td>
+            <td></td> -->
+        </tr>
+        <tr id="buttons">
+            <td colspan="8">
+            <div >
+                <input type="button" class="btn" name="" id="additionbtn">
+                <input type="button" class="btn" name="" id="substractionbtn">
+                <input type="button" class="btn" name="" id="multiplitionbtn">
+                <input type="button" class="btn" name="" id="divisionbtn"> 
+            </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
