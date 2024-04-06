@@ -11,6 +11,9 @@
             border-collapse: collapse;
             width: 60%;
             height: 500px;
+            margin-left: 20%;
+            margin-top: 100px;
+            background-color: #85a9b4
         }
         th{
             height: 50px;
@@ -27,8 +30,21 @@
         }
         .btn{
             width: 180px;
-            padding-left: 40px;
+            /* padding-left: 40px; */
             position: relative;
+            /* box-sizing: border-box; */
+            margin-right: 40px;
+            margin-left: 20px;
+        }
+        #resultArea{
+            width: 300px;
+            height: 50px;
+            /* background-color: red; */
+            /* margin-left: 236px; */
+            display: inline-block;
+            /* vertical-align:; */
+            padding-top: 20px;
+            font-size: large;
         }
     </style>
 </head>
@@ -52,7 +68,7 @@
             <br><br><br>
             <input type="text" id="secondbox" name="calci">
             <br><br><br>
-            <input type="text" id="resultbox" name="calci">
+            <div id="resultArea"><h1></h1></div>
             </td>
             <!-- <td></td>
             <td></td>
@@ -61,13 +77,44 @@
         <tr id="buttons">
             <td colspan="8">
             <div >
-                <input type="button" class="btn" name="" id="additionbtn">
-                <input type="button" class="btn" name="" id="substractionbtn">
-                <input type="button" class="btn" name="" id="multiplitionbtn">
-                <input type="button" class="btn" name="" id="divisionbtn"> 
+                <input type="button" class="btn" value="Addition" id="additionbtn" onclick="doCalculation('add')">
+                <input type="button" class="btn" value="Subtraction" id="substractionbtn" onclick="doCalculation('sub')">
+                <input type="button" class="btn" value="Multiplication" id="multiplitionbtn" onclick="doCalculation('mul')">
+                <input type="button" class="btn" value="Division" id="divisionbtn" onclick="doCalculation('div')"> 
             </div>
             </td>
         </tr>
     </table>
+
+    <script>
+
+         function doCalculation(choice){
+
+          var inputNo1 =document.getElementById("firstbox");
+          var inputNo2 =document.getElementById("secondbox");  
+          var Result; 
+            switch(choice){
+                case 'add':
+                Result = (parseInt(inputNo1.value) + parseInt(inputNo2.value));
+                document.getElementById("resultArea").innerText = Result;
+                break;
+                case 'sub':
+                var Result = (parseInt(inputNo1.value) - parseInt(inputNo2.value));
+                document.getElementById("resultArea").innerText = Result;
+                break;
+                case 'mul':
+                var Result = (parseInt(inputNo1.value) * parseInt(inputNo2.value));
+                document.getElementById("resultArea").innerText = Result;
+                break;
+                case 'div':
+                var Result = (parseInt(inputNo1.value)/parseInt(inputNo2.value));
+                document.getElementById("resultArea").innerText = Result;
+                break;
+            }
+
+        }
+
+        
+    </script>
 </body>
 </html>
