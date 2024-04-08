@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="myDiv" style="width: 200px; position: absolute; left: -7px; top: 0px">
+    <img src="car.png" height="100px" width="200px" />
+  </div>
+  <div style="
+        height: 50px;
+        width: 500px;
+        background-color: black;
+        position: absolute;
+        left: 0px;
+        top: 90px;
+      "></div>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <input type="button" value="Move" onclick="Move()" />
+  <input type="button" value="Stop" onclick="Stop()" />
+  <script>
+    var leftVal = -7;
+    var arrayOfQueues = new Array();
+    var arrayOfInterval = new Array();
+    var cartop = 0;
+    function Move() {
+      // stop();
+      // debugger;
+      var qNo = setInterval(KeepMoving, 100);
+      arrayOfInterval.push(qNo);
+    }
+    function Stop() {
+      for (var i = 0; i < arrayOfQueues.length; i++) {
+        var qToStop = arrayOfQueues[i];
+        // console.log("clearing interval "+ qToStop)
+        clearInterval(qToStop);
+      }
+    }
+    function KeepMoving() {
+      if (leftVal > 500) {
+        // debugger;
+        stop();
+        carFallDown();
+      } else {
+        var refTomyDiv = document.getElementById("myDiv");
+        if (refTomyDiv != null) {
+          leftVal = leftVal + 20;
+          refTomyDiv.style.left = leftVal + "px";
+        }
+      }
+    }
+
+    function carFallDown() {
+      // debugger;
+      var intervalId = setInterval(carFalling, 100);
+      arrayOfInterval.push(intervalId);
+    }
+
+    function carFalling() {
+      if (cartop > 700) {
+        //do something
+        carFallen();
+      }
+      else {
+        var refTomyDiv = document.getElementById("myDiv");
+        // debugger;
+        if (refTomyDiv != null) {
+          refTomyDiv.style.rotate = "30deg";
+          cartop = cartop + 5;
+          refTomyDiv.style.top = cartop + "px";
+        }
+      }
+    }
+
+    function carFallen() {
+      for (var i = 0; i < arrayOfInterval.length; i++) {
+        var idToclearInterval = arrayOfInterval[i];
+        clearInterval(idToclearInterval);
+
+        var refTomyDiv = document.getElementById("myDiv");
+        refTomyDiv.style.rotate = "180deg";
+        refTomyDiv.style.opacity = 0.4;
+      }
+    }
+  </script>
