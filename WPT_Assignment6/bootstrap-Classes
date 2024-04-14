@@ -1,0 +1,53 @@
+.container - for container
+.container border - will give container with transparent border
+card - cards image
+image:
+image-fluid - responsive image
+float-end-w-25 - float image around text/paragraph
+.clearfix - clear floating
+d-block mx-auto w-25 rounded - image at center
+
+```nav/navbar:
+class = navbar navbar-expand-lg navbar-light bg-light   - navbar class
+inside nav
+class = container - will be at the center by keeping some margin bydefault
+class = container-fluid  -  will be at left side
+class = fixed-top  - navbar will stick to the top 
+
+nav:
+just like a navbar but links more visible 
+basically nav is not having background like navbar
+
+```tabs
+we can say - set of dynamic buttons horizontal as well as vertical
+
+#Horizontal
+<ul class = "nav nav-pills mb-3>
+<li class = "nav-item" role = "presentation"> 
+<button 
+class = "nav-link active"
+id = "pills-home-tab"
+data-bs-toggle = "pill"
+data-bs-target = "#pills-home"
+type= "button"
+role = "tab"
+aria-controls = "pills-home"
+aria-selected = "true"
+>
+Home
+</button>
+</li>
+<li class = "nav-item" role = "presentation"> 
+<button 
+class = "nav-link "
+id = "pills-profile-tab"
+data-bs-toggle = "pill"
+data-bs-target = "#pills-profile"
+type= "button"
+role = "tab"
+aria-controls = "pills-profile"
+aria-selected = "false"
+>
+Home
+</button>
+</li>
