@@ -20,11 +20,17 @@
   <br /><br /><br /><br /><br /><br /><br /><br /><br />
   <input type="button" value="Move" onclick="Move()" />
   <input type="button" value="Stop" onclick="Stop()" />
+  <br><br>
+  <label for="axis">X-AXIS</label><input type="text"  id="xvalue">
+  <br><br> 
+  <label for="axis">Y-AXIS</label><input type="text"  id="yvalue">
   <script>
     var leftVal = -7;
     var arrayOfQueues = new Array();
     var arrayOfInterval = new Array();
     var cartop = 0;
+    var xvalue;
+    var yvalue;
     function Move() {
       // stop();
       // debugger;
@@ -48,6 +54,9 @@
         if (refTomyDiv != null) {
           leftVal = leftVal + 20;
           refTomyDiv.style.left = leftVal + "px";
+          xvalue = document.getElementById("xvalue");
+          yvalue = document.getElementById("yvalue");
+          xvalue.value(leftVal);
         }
       }
     }
@@ -70,6 +79,9 @@
           refTomyDiv.style.rotate = "30deg";
           cartop = cartop + 5;
           refTomyDiv.style.top = cartop + "px";
+          xvalue = document.getElementById("xvalue");
+          yvalue = document.getElementById("yvalue");
+          yvalue.value(cartop);
         }
       }
     }
